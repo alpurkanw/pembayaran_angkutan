@@ -1,0 +1,14 @@
+master Jenis tagihan 
+master member 
+
+Pembuatan tagihan 
+list tagihan 
+laporan tagihan 
+
+
+member
+login 
+daftar
+ruang memeber
+	profile
+	lihat tagihan 

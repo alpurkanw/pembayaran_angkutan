@@ -1,0 +1,456 @@
+/*
+ Navicat Premium Data Transfer
+
+ Source Server         : local-3306(old)
+ Source Server Type    : MySQL
+ Source Server Version : 100427
+ Source Host           : localhost:3306
+ Source Schema         : lm_material
+
+ Target Server Type    : MySQL
+ Target Server Version : 100427
+ File Encoding         : 65001
+
+ Date: 02/01/2024 09:47:24
+*/
+
+SET NAMES utf8mb4;
+SET FOREIGN_KEY_CHECKS = 0;
+
+-- ----------------------------
+-- Table structure for tm_material
+-- ----------------------------
+DROP TABLE IF EXISTS `tm_material`;
+CREATE TABLE `tm_material`  (
+  `id` int(4) NOT NULL AUTO_INCREMENT,
+  `namamat` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `harga` decimal(15, 0) NULL DEFAULT NULL,
+  `ket` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 15 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of tm_material
+-- ----------------------------
+INSERT INTO `tm_material` VALUES (2, 'PASIR', NULL, NULL);
+INSERT INTO `tm_material` VALUES (3, 'SIRTU', NULL, NULL);
+INSERT INTO `tm_material` VALUES (9, 'SPLIT 3/5', NULL, NULL);
+INSERT INTO `tm_material` VALUES (10, 'SPLIT 2/3', NULL, NULL);
+INSERT INTO `tm_material` VALUES (11, 'BATU', NULL, NULL);
+INSERT INTO `tm_material` VALUES (12, 'KORAL', NULL, NULL);
+INSERT INTO `tm_material` VALUES (13, 'TANAH TIMBUNAN', NULL, NULL);
+INSERT INTO `tm_material` VALUES (14, 'ABU BATU', NULL, NULL);
+
+-- ----------------------------
+-- Table structure for tm_pic
+-- ----------------------------
+DROP TABLE IF EXISTS `tm_pic`;
+CREATE TABLE `tm_pic`  (
+  `id` int(6) NOT NULL AUTO_INCREMENT,
+  `nama` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `alamat` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
+  `notelp` varchar(25) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `ket` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 32 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of tm_pic
+-- ----------------------------
+INSERT INTO `tm_pic` VALUES (6, 'PAK DIDIT', NULL, NULL, NULL);
+INSERT INTO `tm_pic` VALUES (7, 'SUSI KADES', NULL, NULL, NULL);
+INSERT INTO `tm_pic` VALUES (8, 'REDO', NULL, NULL, NULL);
+INSERT INTO `tm_pic` VALUES (9, 'SANGKUT', NULL, NULL, NULL);
+INSERT INTO `tm_pic` VALUES (10, 'NONI KADES', NULL, NULL, NULL);
+INSERT INTO `tm_pic` VALUES (11, 'DANG ARI', NULL, NULL, NULL);
+INSERT INTO `tm_pic` VALUES (12, 'PAK CINDY', NULL, NULL, NULL);
+INSERT INTO `tm_pic` VALUES (13, 'TANTAWI KADES', NULL, NULL, NULL);
+INSERT INTO `tm_pic` VALUES (14, 'PAMAN ENG', NULL, NULL, NULL);
+INSERT INTO `tm_pic` VALUES (15, 'OM MARTA', NULL, NULL, NULL);
+INSERT INTO `tm_pic` VALUES (16, 'KAPOLSEK', NULL, NULL, NULL);
+INSERT INTO `tm_pic` VALUES (17, 'PEBI', NULL, NULL, NULL);
+INSERT INTO `tm_pic` VALUES (18, 'TAYO', NULL, NULL, NULL);
+INSERT INTO `tm_pic` VALUES (19, 'PT MSS', NULL, NULL, NULL);
+INSERT INTO `tm_pic` VALUES (20, 'TAHUL', NULL, NULL, NULL);
+INSERT INTO `tm_pic` VALUES (21, 'TOPAN', NULL, NULL, NULL);
+INSERT INTO `tm_pic` VALUES (22, 'PELOK', NULL, NULL, NULL);
+INSERT INTO `tm_pic` VALUES (23, 'DENDI', NULL, NULL, NULL);
+INSERT INTO `tm_pic` VALUES (24, 'GILANG', NULL, NULL, NULL);
+INSERT INTO `tm_pic` VALUES (25, 'ANGGI/MIZI', NULL, NULL, NULL);
+INSERT INTO `tm_pic` VALUES (26, 'TEK REZU', NULL, NULL, NULL);
+INSERT INTO `tm_pic` VALUES (27, 'DEDA', NULL, NULL, NULL);
+INSERT INTO `tm_pic` VALUES (28, 'DANG PRAPTO SEKDES RIMBO BESAK', NULL, NULL, NULL);
+INSERT INTO `tm_pic` VALUES (29, 'MUKSIN', NULL, NULL, NULL);
+INSERT INTO `tm_pic` VALUES (30, 'DANG IWAN', NULL, NULL, NULL);
+INSERT INTO `tm_pic` VALUES (31, 'PAMAN ENG', NULL, NULL, NULL);
+
+-- ----------------------------
+-- Table structure for tm_sopir
+-- ----------------------------
+DROP TABLE IF EXISTS `tm_sopir`;
+CREATE TABLE `tm_sopir`  (
+  `id` int(6) NOT NULL AUTO_INCREMENT,
+  `nama` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `alamat` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
+  `notelp` varchar(25) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `ket` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 44 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of tm_sopir
+-- ----------------------------
+INSERT INTO `tm_sopir` VALUES (10, 'ADANG', NULL, NULL, NULL);
+INSERT INTO `tm_sopir` VALUES (13, 'RINDI', NULL, NULL, NULL);
+INSERT INTO `tm_sopir` VALUES (14, 'REDO', NULL, NULL, NULL);
+INSERT INTO `tm_sopir` VALUES (15, 'DENDI', NULL, NULL, NULL);
+INSERT INTO `tm_sopir` VALUES (16, 'RENO', NULL, NULL, NULL);
+INSERT INTO `tm_sopir` VALUES (17, 'MIZI', NULL, NULL, NULL);
+INSERT INTO `tm_sopir` VALUES (18, 'ANDI', NULL, NULL, NULL);
+INSERT INTO `tm_sopir` VALUES (19, 'GUPRI', NULL, NULL, NULL);
+INSERT INTO `tm_sopir` VALUES (20, 'YALOK', NULL, NULL, NULL);
+INSERT INTO `tm_sopir` VALUES (21, 'PAK NURIS', NULL, NULL, NULL);
+INSERT INTO `tm_sopir` VALUES (22, 'PAK HANI', NULL, NULL, NULL);
+INSERT INTO `tm_sopir` VALUES (23, 'LEPAN', NULL, NULL, NULL);
+INSERT INTO `tm_sopir` VALUES (24, 'SANGKUT', NULL, NULL, NULL);
+INSERT INTO `tm_sopir` VALUES (25, 'IWAN', NULL, NULL, NULL);
+INSERT INTO `tm_sopir` VALUES (26, 'RUDI', NULL, NULL, NULL);
+INSERT INTO `tm_sopir` VALUES (27, 'SOLIHIN', NULL, NULL, NULL);
+INSERT INTO `tm_sopir` VALUES (28, 'UJANG', NULL, NULL, NULL);
+INSERT INTO `tm_sopir` VALUES (30, 'ERIK', NULL, NULL, NULL);
+INSERT INTO `tm_sopir` VALUES (31, 'BRAM', NULL, NULL, NULL);
+INSERT INTO `tm_sopir` VALUES (33, 'UCUP', NULL, NULL, NULL);
+INSERT INTO `tm_sopir` VALUES (34, 'ENG', NULL, NULL, NULL);
+INSERT INTO `tm_sopir` VALUES (35, 'AYONG', NULL, NULL, NULL);
+INSERT INTO `tm_sopir` VALUES (36, 'ARDI', NULL, NULL, NULL);
+INSERT INTO `tm_sopir` VALUES (37, 'ADI', NULL, NULL, NULL);
+INSERT INTO `tm_sopir` VALUES (38, 'SUPIR PAK CINDY', NULL, NULL, NULL);
+INSERT INTO `tm_sopir` VALUES (39, 'CIK AGUS/JEK', NULL, NULL, NULL);
+INSERT INTO `tm_sopir` VALUES (40, 'CIK AGUS/TRIN', NULL, NULL, NULL);
+INSERT INTO `tm_sopir` VALUES (41, 'ANDRE', NULL, NULL, NULL);
+INSERT INTO `tm_sopir` VALUES (42, 'MELAN', NULL, NULL, NULL);
+INSERT INTO `tm_sopir` VALUES (43, 'HARMO', NULL, NULL, NULL);
+
+-- ----------------------------
+-- Table structure for tm_tujuan
+-- ----------------------------
+DROP TABLE IF EXISTS `tm_tujuan`;
+CREATE TABLE `tm_tujuan`  (
+  `id` int(4) NOT NULL AUTO_INCREMENT,
+  `tujuan` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `ket` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 50 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of tm_tujuan
+-- ----------------------------
+INSERT INTO `tm_tujuan` VALUES (8, 'TEDUNAN', NULL);
+INSERT INTO `tm_tujuan` VALUES (9, 'PABRIK SENDAWAR ', NULL);
+INSERT INTO `tm_tujuan` VALUES (10, 'TALANG KABU', NULL);
+INSERT INTO `tm_tujuan` VALUES (11, 'PADANG SERUNAIAN', NULL);
+INSERT INTO `tm_tujuan` VALUES (12, 'MANDI ANGIN', NULL);
+INSERT INTO `tm_tujuan` VALUES (13, 'PINO', NULL);
+INSERT INTO `tm_tujuan` VALUES (14, 'TENANGAN', NULL);
+INSERT INTO `tm_tujuan` VALUES (15, 'CUGUNG LANGU', NULL);
+INSERT INTO `tm_tujuan` VALUES (16, 'MUARA TIMPUT', NULL);
+INSERT INTO `tm_tujuan` VALUES (17, 'PRING BARU', NULL);
+INSERT INTO `tm_tujuan` VALUES (18, 'KEMANG MUMPO', NULL);
+INSERT INTO `tm_tujuan` VALUES (19, 'RIMBO BESAK', NULL);
+INSERT INTO `tm_tujuan` VALUES (20, 'KARANG ANYAR', NULL);
+INSERT INTO `tm_tujuan` VALUES (21, 'TALANG ALAI', NULL);
+INSERT INTO `tm_tujuan` VALUES (22, 'PRIBADI', NULL);
+INSERT INTO `tm_tujuan` VALUES (23, 'SD 5 MARAS TENGAH', NULL);
+INSERT INTO `tm_tujuan` VALUES (24, 'GUNUNG KEMBANG', NULL);
+INSERT INTO `tm_tujuan` VALUES (25, 'JALAN BARU', NULL);
+INSERT INTO `tm_tujuan` VALUES (26, 'KEMANG MANIS', NULL);
+INSERT INTO `tm_tujuan` VALUES (27, 'DESA NANJUNGAN', NULL);
+INSERT INTO `tm_tujuan` VALUES (28, 'PRIBADI KEMANG MUMPO', NULL);
+INSERT INTO `tm_tujuan` VALUES (29, 'MANDI ANGIN', NULL);
+INSERT INTO `tm_tujuan` VALUES (30, 'PRIBADI MUARA TIMPUT', NULL);
+INSERT INTO `tm_tujuan` VALUES (31, 'SP3', NULL);
+INSERT INTO `tm_tujuan` VALUES (32, 'NAPALAN', NULL);
+INSERT INTO `tm_tujuan` VALUES (33, 'KAYU ELANG', NULL);
+INSERT INTO `tm_tujuan` VALUES (34, 'TALANG RAMI', NULL);
+INSERT INTO `tm_tujuan` VALUES (35, 'PRIBADI SP3', NULL);
+INSERT INTO `tm_tujuan` VALUES (36, 'BENGKULU', NULL);
+INSERT INTO `tm_tujuan` VALUES (37, 'NANTI AGUNG', NULL);
+INSERT INTO `tm_tujuan` VALUES (39, 'GUNUNG MIGANG', NULL);
+INSERT INTO `tm_tujuan` VALUES (40, 'MUARA MARAS', NULL);
+INSERT INTO `tm_tujuan` VALUES (41, 'MEKAR SARI', NULL);
+INSERT INTO `tm_tujuan` VALUES (42, 'MARAS ', NULL);
+INSERT INTO `tm_tujuan` VALUES (43, 'PADANG PERI', NULL);
+INSERT INTO `tm_tujuan` VALUES (44, 'DESA SENDAWAR', NULL);
+INSERT INTO `tm_tujuan` VALUES (45, 'IRIGASI', NULL);
+INSERT INTO `tm_tujuan` VALUES (46, 'PT MSS CUKO', NULL);
+INSERT INTO `tm_tujuan` VALUES (47, 'TALANG ULU IRIGASI', NULL);
+INSERT INTO `tm_tujuan` VALUES (48, 'TALANG BERINGIN IRIGASI', NULL);
+INSERT INTO `tm_tujuan` VALUES (49, 'MEKAR SARI MUKTI', NULL);
+
+-- ----------------------------
+-- Table structure for tm_user
+-- ----------------------------
+DROP TABLE IF EXISTS `tm_user`;
+CREATE TABLE `tm_user`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `usernm` varchar(25) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `pass` varchar(150) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT '',
+  `notelp` varchar(15) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `level` int(2) NULL DEFAULT NULL,
+  `inp_date` varchar(20) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT 'current_timestamp(6)',
+  `ket` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `nama` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 62 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of tm_user
+-- ----------------------------
+INSERT INTO `tm_user` VALUES (36, 'BOS KU', '$2y$10$WGP6V1jInJOMHRpJtyJ7HO7Lj8C14fMf5JL/so1oU7nHqQcKpyqV6', '085219222200', 1, NULL, NULL, NULL);
+INSERT INTO `tm_user` VALUES (37, 'admin', '$2y$10$WGP6V1jInJOMHRpJtyJ7HO7Lj8C14fMf5JL/so1oU7nHqQcKpyqV6', '-', 2, NULL, NULL, 'admin');
+INSERT INTO `tm_user` VALUES (40, 'satgas', '$2y$10$WGP6V1jInJOMHRpJtyJ7HO7Lj8C14fMf5JL/so1oU7nHqQcKpyqV6', '085219222200', 1, '20230824 002657', NULL, NULL);
+INSERT INTO `tm_user` VALUES (42, 'alpurkan widianto', '$2y$10$D5QSRHaYgMWQnckpp2WsxOgJnpaLAKiPad87UqalBaicevq1y1UgO', '', 1, NULL, NULL, NULL);
+INSERT INTO `tm_user` VALUES (43, 'sd', '$2y$10$5dpoeT/hAcx0Gv06Cg0HsOOmdQkVJUisCif08ZuvOqliKASBS9PP2', '', 1, '2023-08-20 00:00:00.', NULL, NULL);
+INSERT INTO `tm_user` VALUES (44, 'alpurkan widianto', '$2y$10$hV5TdRtM23lTiuNFKUSdiefB/smZywEbFbkuIzLaErt.yiyN17G2C', '', 1, '2023-08-20 00:00:00.', NULL, NULL);
+INSERT INTO `tm_user` VALUES (45, 'alpurkan widianto', '$2y$10$P25R.oZKJ3TrtuTTp6nizea4U6fssuSPabJSAOS7ZD4Q1sTyYhXyG', '', 1, '0000-00-00 00:00:00.', NULL, NULL);
+INSERT INTO `tm_user` VALUES (46, 'alpurkan widianto', '$2y$10$V6BiRrsBqKTiebBgzEeKtuxbmvx59BX9sniDkzJALE68Ju1qBnC1G', '', 1, '0000-00-00 00:00:00.', NULL, NULL);
+INSERT INTO `tm_user` VALUES (47, 'alpurkan widianto', '$2y$10$W6nEgvGes0L5DUIeAugEA.Zakr0iYWrFmufqJcHvhiC9lFbhH5O/W', '', 1, '0000-00-00 00:00:00.', NULL, NULL);
+INSERT INTO `tm_user` VALUES (48, 'alpurkan widianto', '$2y$10$IAry129GP74qhP0TFA1juuj6IHAjqm5EaHBKlG08wV63LafisnKry', '', 1, '0000-00-00 00:00:00.', NULL, NULL);
+INSERT INTO `tm_user` VALUES (49, 'alpurkan widianto', '$2y$10$WxsP4XP3QQWt2BTvlPLvkO/BRXQ6EVRvy.20UDtcEVIgbukANP7KS', '', 3, NULL, NULL, NULL);
+INSERT INTO `tm_user` VALUES (50, '123', '$2y$10$tNREtWhaTUfkUsS1Wzvl/uWE1LrdjhWG6LmkTnydrWlFnlY9sUace', '', 3, NULL, NULL, NULL);
+INSERT INTO `tm_user` VALUES (51, 'alpurkan widianto', '$2y$10$Mr8nOcy8oR5/yVhr0B7wjOyhobe5piQrKJGFps14siJ6/OGrbCFuy', '', 3, '2023-08-22 20:34:11.', NULL, NULL);
+INSERT INTO `tm_user` VALUES (52, 'karyawan1', '$2y$10$af0vKkOLCHyNIZi15yXoueeijXwBxHgu15UbtDWV0NehMKlA7JqLG', '', 3, 'current_timestamp(6)', NULL, NULL);
+INSERT INTO `tm_user` VALUES (53, 'karyawan1', '$2y$10$fCl9iyniXgJ3qAxGKk68qOYLIZy.U3Qlkg9ri8ipTGV4hjP1wa9rW', '', 2, '20230822 205257', NULL, NULL);
+INSERT INTO `tm_user` VALUES (54, 'alpurkan widianto', '$2y$10$Vim9JsdbI/AD03YpzwmyVOrMRXKKaWpyA46nNU15cUwppS8uAhp6m', '', 3, '20230824 001933', NULL, NULL);
+INSERT INTO `tm_user` VALUES (55, 'alpurkan widianto', '$2y$10$svAnOsQDO17FcuXF6mAdD.fc5ks.3Q3RRYLJJjR4C60y/Neo22e3O', '0', 3, '20230824 002505', NULL, NULL);
+INSERT INTO `tm_user` VALUES (56, 'alpurkan widianto', '$2y$10$spHnGiMOVSfsh1WHkt3ASOcOZ3pPwO1IzyDWpCoJZOGRAneTMDdkW', '0', 3, '20230824 002657', NULL, NULL);
+INSERT INTO `tm_user` VALUES (57, 'admin3', '$2y$10$WGP6V1jInJOMHRpJtyJ7HO7Lj8C14fMf5JL/so1oU7nHqQcKpyqV6', '8', 2, '20230916 162210', NULL, NULL);
+INSERT INTO `tm_user` VALUES (58, 'alpurkan widianto', '$2y$10$.mG9asCW.jO5/138LJ2bKehzE0MjI8nAHeI6NHVOlH4HPglxnJT7q', '9', 2, '20231001 224709', NULL, NULL);
+INSERT INTO `tm_user` VALUES (59, 'tes', '$2y$10$wqUktO6wDgRB6NoC7jx0ReLcShFpSN6Jf4ae8AvnJq2mqkEpEKMzG', '9', 2, '20231001 225240', NULL, NULL);
+INSERT INTO `tm_user` VALUES (61, 'tes', '$2y$10$zHKqldoV8VRWq8Fe5jA6WeeCfATWqH07AaRVYukkmbaJ7VJJUIgTq', '9', 3, '20231001 231128', NULL, NULL);
+
+-- ----------------------------
+-- Table structure for trx_angkutan
+-- ----------------------------
+DROP TABLE IF EXISTS `trx_angkutan`;
+CREATE TABLE `trx_angkutan`  (
+  `id` int(8) NOT NULL AUTO_INCREMENT,
+  `idspr` int(4) NULL DEFAULT NULL,
+  `namaspr` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `notelpspr` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `idpic` int(4) NULL DEFAULT NULL,
+  `namapic` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `notelppic` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `idmat` int(4) NULL DEFAULT NULL,
+  `namamat` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `jum_kubikasi` decimal(12, 2) NULL DEFAULT 0.00,
+  `hargaperkubik` decimal(15, 2) NULL DEFAULT NULL,
+  `upah_ang_per_kubik` decimal(15, 2) NULL DEFAULT NULL,
+  `tot_harga_tagih` decimal(15, 2) NULL DEFAULT NULL,
+  `namacust` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `alamatcust` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `tujuan` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `tglangkut` varchar(19) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `st_byr_spr` int(1) NULL DEFAULT NULL COMMENT 'status pemabayaran sopir',
+  `tgl_byr_spr` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT 'tgl di bayar upah sopeir',
+  `st_byr_cust` int(1) NULL DEFAULT NULL COMMENT 'status bayar material',
+  `tgl_byr_cust` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT 'tgl customer bayar',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 201 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of trx_angkutan
+-- ----------------------------
+INSERT INTO `trx_angkutan` VALUES (4, 10, 'RINDI', NULL, 14, 'SUSI KADES', NULL, 2, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20231216', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (5, 20, 'YALOK', NULL, 8, 'REDO', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PADANG SERUNAIAN', '20230501', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (6, 20, 'YALOK', NULL, 8, 'REDO', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PADANG SERUNAIAN', '20230501', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (7, 21, 'PAK NURIS', NULL, 14, 'PAMAN ENG', NULL, 2, 'PASIR', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'NANTI AGUNG', '20230502', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (8, 20, 'YALOK', NULL, 8, 'REDO', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PRIBADI', '20230502', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (10, 10, 'ADANG', NULL, 14, 'PAMAN ENG', NULL, 11, 'PASIR', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'NANTI AGUNG', '20230503', 1, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (11, 13, 'RINDI', NULL, 20, 'TAHUL', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MEKAR SARI MUKTI', '20230504', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (12, 13, 'RINDI', NULL, 20, 'TAHUL', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MEKAR SARI MUKTI', '20230504', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (13, 21, 'PAK NURIS', NULL, 14, 'PAMAN ENG', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'NANTI AGUNG', '20230505', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (14, 21, 'PAK NURIS', NULL, 14, 'PAMAN ENG', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'NANTI AGUNG', '20230505', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (15, 21, 'PAK NURIS', NULL, 14, 'PAMAN ENG', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'NANTI AGUNG', '20230505', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (16, 34, 'ENG', NULL, 21, 'TOPAN', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'BENGKULU', '20230505', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (17, 26, 'RUDI', NULL, 20, 'TAHUL', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MEKAR SARI MUKTI', '20230505', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (18, 14, 'REDO', NULL, 8, 'REDO', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PADANG SERUNAIAN', '20230506', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (21, 13, 'RINDI', NULL, 20, 'TAHUL', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MEKAR SARI MUKTI', '20230506', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (22, 34, 'ENG', NULL, 21, 'TOPAN', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'BENGKULU', '20230506', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (23, 15, 'DENDI', NULL, 8, 'REDO', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PADANG SERUNAIAN', '20230506', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (24, 15, 'DENDI', NULL, 22, 'PELOK', NULL, 12, 'KORAL', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'NAPALAN', '20230507', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (25, 10, 'ADANG', NULL, 22, 'PAK DIDIT', NULL, 12, 'PASIR', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'TEDUNAN', '20230507', 1, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (26, 13, 'RINDI', NULL, 20, 'TAHUL', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'GUNUNG MIGANG', '20230507', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (27, 15, 'DENDI', NULL, 22, 'PELOK', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'NAPALAN', '20230507', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (28, 10, 'ADANG', NULL, 22, 'PELOK', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'NAPALAN', '20230507', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (29, 27, 'SOLIHIN', NULL, 22, 'PELOK', NULL, 12, 'KORAL', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'NAPALAN', '20230507', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (30, 27, 'SOLIHIN', NULL, 22, 'PELOK', NULL, 12, 'KORAL', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'NAPALAN', '20230507', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (31, 20, 'YALOK', NULL, 8, 'REDO', NULL, 12, 'KORAL', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230508', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (32, 24, 'SANGKUT', NULL, 8, 'REDO', NULL, 12, 'KORAL', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230508', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (33, 24, 'SANGKUT', NULL, 8, 'REDO', NULL, 12, 'KORAL', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230508', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (34, 13, 'RINDI', NULL, 20, 'TAHUL', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'GUNUNG MIGANG', '20230508', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (35, 13, 'RINDI', NULL, 20, 'TAHUL', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'GUNUNG MIGANG', '20230508', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (37, 10, 'ADANG', NULL, 14, 'PAMAN ENG', NULL, 12, 'KORAL', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230508', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (38, 15, 'DENDI', NULL, 8, 'REDO', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230509', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (39, 15, 'DENDI', NULL, 8, 'REDO', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230509', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (40, 20, 'YALOK', NULL, 8, 'REDO', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230509', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (41, 20, 'YALOK', NULL, 8, 'REDO', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230509', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (42, 22, 'PAK HANI', NULL, 22, 'PELOK', NULL, 2, 'PASIR', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'KEMANG MUMPO', '20230901', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (43, 23, 'LEPAN', NULL, 29, 'MUKSIN', NULL, 2, 'PASIR', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'KARANG ANYAR', '20230901', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (44, 29, 'ERIK', NULL, 29, 'MUKSIN', NULL, 2, 'PASIR', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'KARANG ANYAR', '20230901', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (45, 24, 'SANGKUT', NULL, 8, 'REDO', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230509', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (46, 24, 'SANGKUT', NULL, 8, 'REDO', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230509', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (47, 14, 'REDO', NULL, 8, 'REDO', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'TALANG ALAI', '20230904', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (48, 25, 'IWAN', NULL, 8, 'REDO', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230509', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (49, 18, 'ANDI', NULL, 8, 'REDO', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'TALANG ALAI', '20230904', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (50, 25, 'IWAN', NULL, 8, 'REDO', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230509', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (51, 28, 'UJANG', NULL, 8, 'REDO', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'TALANG ALAI', '20230904', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (52, 10, 'ADANG', NULL, 8, 'REDO', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230509', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (53, 10, 'ADANG', NULL, 8, 'REDO', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230509', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (54, 23, 'LEPAN', NULL, 6, 'PAK DIDIT', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20230905', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (55, 23, 'LEPAN', NULL, 6, 'PAK DIDIT', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20230905', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (56, 17, 'MIZI', NULL, 8, 'REDO', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230509', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (57, 23, 'LEPAN', NULL, 6, 'PAK DIDIT', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20230905', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (58, 17, 'MIZI', NULL, 8, 'REDO', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230509', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (59, 17, 'MIZI', NULL, 6, 'PAK DIDIT', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20230905', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (60, 17, 'MIZI', NULL, 6, 'PAK DIDIT', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20230905', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (61, 16, 'RENO', NULL, 12, 'PAK CINDY', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PADANG PERI', '20230509', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (62, 18, 'ANDI', NULL, 6, 'PAK DIDIT', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20230905', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (63, 18, 'ANDI', NULL, 6, 'PAK DIDIT', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20230905', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (64, 13, 'RINDI', NULL, 20, 'TAHUL', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'GUNUNG MIGANG', '20230509', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (65, 14, 'REDO', NULL, 6, 'PAK DIDIT', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20230905', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (66, 18, 'ANDI', NULL, 8, 'REDO', NULL, 12, 'KORAL', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA TIMPUT', '20230509', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (67, 14, 'REDO', NULL, 6, 'PAK DIDIT', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20230905', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (68, 19, 'GUPRI', NULL, 8, 'REDO', NULL, 12, 'KORAL', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA TIMPUT', '20230509', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (69, 28, 'UJANG', NULL, 6, 'PAK DIDIT', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20230905', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (70, 16, 'RENO', NULL, 8, 'REDO', NULL, 12, 'KORAL', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA TIMPUT', '20230509', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (71, 28, 'UJANG', NULL, 6, 'PAK DIDIT', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20230905', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (72, 16, 'RENO', NULL, 6, 'PAK DIDIT', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20230905', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (73, 10, 'ADANG', NULL, 22, 'PELOK', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'NAPALAN', '20230510', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (74, 36, 'ARDI', NULL, 29, 'MUKSIN', NULL, 2, 'PASIR', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'KARANG ANYAR', '20230901', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (75, 16, 'RENO', NULL, 6, 'PAK DIDIT', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20230905', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (76, 27, 'SOLIHIN', NULL, 22, 'PELOK', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'NAPALAN', '20230510', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (77, 22, 'PAK HANI', NULL, 6, 'PAK DIDIT', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20230905', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (78, 20, 'YALOK', NULL, 8, 'REDO', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230510', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (79, 20, 'YALOK', NULL, 6, 'PAK DIDIT', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20230905', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (80, 24, 'SANGKUT', NULL, 8, 'REDO', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230510', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (81, 25, 'IWAN', NULL, 8, 'REDO', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230510', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (82, 10, 'ADANG', NULL, 8, 'REDO', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230510', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (83, 17, 'MIZI', NULL, 8, 'REDO', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230510', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (84, 23, 'LEPAN', NULL, 6, 'PAK DIDIT', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20230906', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (85, 19, 'GUPRI', NULL, 8, 'REDO', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230510', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (86, 23, 'LEPAN', NULL, 6, 'PAK DIDIT', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20230906', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (87, 37, 'ADI', NULL, 8, 'REDO', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230510', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (88, 17, 'MIZI', NULL, 6, 'PAK DIDIT', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20230906', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (89, 27, 'SOLIHIN', NULL, 8, 'REDO', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230510', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (90, 18, 'ANDI', NULL, 6, 'PAK DIDIT', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20230906', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (91, 13, 'RINDI', NULL, 20, 'TAHUL', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'GUNUNG MIGANG', '20230510', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (92, 18, 'ANDI', NULL, 6, 'PAK DIDIT', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20230906', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (93, 13, 'RINDI', NULL, 20, 'TAHUL', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'GUNUNG MIGANG', '20230510', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (94, 21, 'PAK NURIS', NULL, 14, 'PAMAN ENG', NULL, 2, 'PASIR', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'NANTI AGUNG', '20230510', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (95, 10, 'ADANG', NULL, 22, 'PELOK', NULL, 2, 'PASIR', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'NAPALAN', '20230510', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (96, 10, 'ADANG', NULL, 6, 'PAK DIDIT', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20230906', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (97, 21, 'PAK NURIS', NULL, 22, 'PELOK', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'NAPALAN', '20230511', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (98, 28, 'UJANG', NULL, 6, 'PAK DIDIT', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20230906', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (99, 10, 'ADANG', NULL, 22, 'PELOK', NULL, 2, 'PASIR', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'NAPALAN', '20230511', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (100, 10, 'ADANG', NULL, 14, 'PAMAN ENG', NULL, 2, 'PASIR', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'NANTI AGUNG', '20230511', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (101, 20, 'YALOK', NULL, 6, 'PAK DIDIT', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20230906', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (102, 16, 'RENO', NULL, 12, 'PAK CINDY', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PADANG PERI', '20230512', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (103, 10, 'ADANG', NULL, 14, 'PAMAN ENG', NULL, 2, 'PASIR', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'NANTI AGUNG', '20230512', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (104, 23, 'LEPAN', NULL, 21, 'TOPAN', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'TENANGAN', '20230907', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (105, 21, 'PAK NURIS', NULL, 14, 'PAMAN ENG', NULL, 2, 'PASIR', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'NANTI AGUNG', '20230512', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (106, 22, 'PAK HANI', NULL, 21, 'TOPAN', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'TENANGAN', '20230907', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (107, 10, 'ADANG', NULL, 8, 'REDO', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230513', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (108, 10, 'ADANG', NULL, 8, 'REDO', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230513', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (109, 27, 'SOLIHIN', NULL, 21, 'TOPAN', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'TENANGAN', '20230907', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (110, 27, 'SOLIHIN', NULL, 8, 'REDO', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230513', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (111, 27, 'SOLIHIN', NULL, 8, 'REDO', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230513', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (112, 24, 'SANGKUT', NULL, 21, 'TOPAN', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'TENANGAN', '20230907', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (113, 16, 'RENO', NULL, 8, 'REDO', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230513', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (114, 20, 'YALOK', NULL, 21, 'TOPAN', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'TENANGAN', '20230907', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (115, 16, 'RENO', NULL, 8, 'REDO', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230513', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (116, 31, 'BRAM', NULL, 21, 'TOPAN', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'TENANGAN', '20230907', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (117, 18, 'ANDI', NULL, 8, 'REDO', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230513', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (118, 18, 'ANDI', NULL, 8, 'REDO', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230513', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (119, 17, 'MIZI', NULL, 8, 'REDO', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230513', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (120, 10, 'ADANG', NULL, 21, 'TOPAN', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'TENANGAN', '20230908', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (121, 17, 'MIZI', NULL, 8, 'REDO', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230513', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (122, 22, 'PAK HANI', NULL, 21, 'TOPAN', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'TENANGAN', '20230908', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (123, 19, 'GUPRI', NULL, 8, 'REDO', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230513', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (124, 27, 'SOLIHIN', NULL, 21, 'TOPAN', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'TENANGAN', '20230908', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (125, 19, 'GUPRI', NULL, 8, 'REDO', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230513', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (126, 18, 'ANDI', NULL, 8, 'REDO', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230513', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (127, 18, 'ANDI', NULL, 8, 'REDO', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230513', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (128, 15, 'DENDI', NULL, 8, 'REDO', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230513', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (129, 15, 'DENDI', NULL, 13, 'TANTAWI KADES', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'KEMANG MANIS', '20230513', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (130, 16, 'RENO', NULL, 12, 'PAK CINDY', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PADANG PERI', '20230514', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (131, 24, 'SANGKUT', NULL, 8, 'REDO', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MARAS ', '20230514', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (132, 27, 'SOLIHIN', NULL, 13, 'TANTAWI KADES', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'KEMANG MANIS', '20230514', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (133, 27, 'SOLIHIN', NULL, 13, 'TANTAWI KADES', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'KEMANG MANIS', '20230514', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (134, 24, 'SANGKUT', NULL, 21, 'TOPAN', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'TENANGAN', '20230908', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (135, 24, 'SANGKUT', NULL, 21, 'TOPAN', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'TENANGAN', '20230908', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (136, 17, 'MIZI', NULL, 13, 'TANTAWI KADES', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'KEMANG MANIS', '20230514', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (137, 31, 'BRAM', NULL, 21, 'TOPAN', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'TENANGAN', '20230908', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (138, 17, 'MIZI', NULL, 13, 'TANTAWI KADES', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'KEMANG MANIS', '20230514', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (139, 34, 'ENG', NULL, 6, 'PAK DIDIT', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20230908', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (140, 18, 'ANDI', NULL, 13, 'TANTAWI KADES', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'KEMANG MANIS', '20230514', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (141, 34, 'ENG', NULL, 6, 'PAK DIDIT', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20230908', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (142, 18, 'ANDI', NULL, 13, 'TANTAWI KADES', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'KEMANG MANIS', '20230514', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (143, 16, 'RENO', NULL, 13, 'TANTAWI KADES', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'KEMANG MANIS', '20230514', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (144, 10, 'ADANG', NULL, 6, 'PAK DIDIT', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20230908', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (145, 27, 'SOLIHIN', NULL, 6, 'PAK DIDIT', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20230908', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (146, 21, 'PAK NURIS', NULL, 13, 'TANTAWI KADES', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'KEMANG MANIS', '20230514', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (147, 22, 'PAK HANI', NULL, 26, 'TEK REZU', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'JALAN BARU', '20230908', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (148, 16, 'RENO', NULL, 8, 'REDO', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230514', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (149, 27, 'SOLIHIN', NULL, 26, 'TEK REZU', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'JALAN BARU', '20230908', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (150, 17, 'MIZI', NULL, 8, 'REDO', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230514', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (151, 27, 'SOLIHIN', NULL, 8, 'REDO', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230514', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (152, 22, 'PAK HANI', NULL, 22, 'PELOK', NULL, 2, 'PASIR', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'KEMANG MUMPO', '20230908', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (153, 27, 'SOLIHIN', NULL, 13, 'TANTAWI KADES', NULL, 2, 'PASIR', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'KEMANG MANIS', '20230514', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (154, 18, 'ANDI', NULL, 8, 'REDO', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230514', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (155, 23, 'LEPAN', NULL, 6, 'PAK DIDIT', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20230909', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (156, 23, 'LEPAN', NULL, 6, 'PAK DIDIT', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20230909', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (157, 23, 'LEPAN', NULL, 6, 'PAK DIDIT', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20230909', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (158, 15, 'DENDI', NULL, 8, 'REDO', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA MARAS', '20230514', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (159, 17, 'MIZI', NULL, 6, 'PAK DIDIT', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20230909', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (160, 15, 'DENDI', NULL, 13, 'TANTAWI KADES', NULL, 2, 'PASIR', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'KEMANG MANIS', '20230514', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (161, 17, 'MIZI', NULL, 6, 'PAK DIDIT', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20230909', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (162, 15, 'DENDI', NULL, 22, 'PELOK', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'NAPALAN', '20230515', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (163, 27, 'SOLIHIN', NULL, 6, 'PAK DIDIT', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20230909', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (164, 27, 'SOLIHIN', NULL, 6, 'PAK DIDIT', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20230909', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (165, 10, 'ADANG', NULL, 22, 'PELOK', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'NAPALAN', '20230515', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (166, 27, 'SOLIHIN', NULL, 6, 'PAK DIDIT', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20230909', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (167, 21, 'PAK NURIS', NULL, 22, 'PELOK', NULL, 2, 'PASIR', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'NAPALAN', '20230515', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (168, 10, 'ADANG', NULL, 6, 'PAK DIDIT', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20230913', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (170, 33, 'UCUP', NULL, 6, 'PAK DIDIT', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20230909', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (171, 33, 'UCUP', NULL, 6, 'PAK DIDIT', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20230909', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (172, 10, 'ADANG', NULL, 22, 'PELOK', NULL, 2, 'PASIR', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'NAPALAN', '20230515', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (173, 33, 'UCUP', NULL, 6, 'PAK DIDIT', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20230909', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (174, 15, 'DENDI', NULL, 23, 'DENDI', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PRIBADI', '20230515', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (175, 31, 'BRAM', NULL, 6, 'PAK DIDIT', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20230909', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (176, 31, 'BRAM', NULL, 6, 'PAK DIDIT', NULL, 3, 'SIRTU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PABRIK SENDAWAR ', '20230909', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (177, 24, 'SANGKUT', NULL, 8, 'REDO', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'MUARA TIMPUT', '20230515', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (178, 17, 'MIZI', NULL, 7, 'SUSI KADES', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'DESA NANJUNGAN', '20230516', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (179, 19, 'GUPRI', NULL, 7, 'SUSI KADES', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'DESA NANJUNGAN', '20230516', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (180, 18, 'ANDI', NULL, 7, 'SUSI KADES', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'DESA NANJUNGAN', '20230516', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (181, 25, 'IWAN', NULL, 7, 'SUSI KADES', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'DESA NANJUNGAN', '20230516', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (182, 24, 'SANGKUT', NULL, 12, 'PAK CINDY', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PADANG PERI', '20230517', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (183, 16, 'RENO', NULL, 12, 'PAK CINDY', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'PADANG PERI', '20230517', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (184, 25, 'IWAN', NULL, 12, 'PAK CINDY', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'IRIGASI', '20230518', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (185, 24, 'SANGKUT', NULL, 12, 'PAK CINDY', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'IRIGASI', '20230518', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (186, 16, 'RENO', NULL, 12, 'PAK CINDY', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'IRIGASI', '20230518', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (187, 18, 'ANDI', NULL, 12, 'PAK CINDY', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'IRIGASI', '20230518', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (188, 38, 'SUPIR PAK CINDY', NULL, 12, 'PAK CINDY', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'IRIGASI', '20230518', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (189, 10, 'ADANG', NULL, 22, 'PELOK', NULL, 2, 'PASIR', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'NAPALAN', '20230518', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (190, 17, 'MIZI', NULL, 22, 'PELOK', NULL, 2, 'PASIR', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'NAPALAN', '20230518', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (191, 19, 'GUPRI', NULL, 22, 'PELOK', NULL, 2, 'PASIR', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'NAPALAN', '20230518', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (192, 24, 'SANGKUT', NULL, 9, 'SANGKUT', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'DESA SENDAWAR', '20230519', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (193, 39, 'CIK AGUS/JEK', NULL, 9, 'SANGKUT', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'DESA SENDAWAR', '20230519', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (194, 24, 'SANGKUT', NULL, 9, 'SANGKUT', NULL, 2, 'PASIR', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'DESA SENDAWAR', '20230519', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (195, 17, 'MIZI', NULL, 12, 'PAK CINDY', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'IRIGASI', '20230519', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (196, 25, 'IWAN', NULL, 12, 'PAK CINDY', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'IRIGASI', '20230519', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (197, 18, 'ANDI', NULL, 12, 'PAK CINDY', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'IRIGASI', '20230519', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (198, 16, 'RENO', NULL, 12, 'PAK CINDY', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'IRIGASI', '20230519', 0, '0', 0, '0');
+INSERT INTO `trx_angkutan` VALUES (199, 19, 'GUPRI', NULL, 12, 'PAK CINDY', NULL, 11, 'BATU', 0.00, 0.00, 0.00, NULL, NULL, NULL, 'IRIGASI', '20230519', 0, '0', 0, '0');
+
+SET FOREIGN_KEY_CHECKS = 1;
